@@ -1,0 +1,70 @@
+@import "../../app.scss";
+
+.About {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url("/mountains.png");
+
+    @include mobile {
+        align-self: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .about__container{
+
+        text-align: center;
+    }
+    
+    .about__cards {
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    margin-top: 50px;
+    }
+
+    .about__card {
+
+        background: var(--color-bg-variant);
+        border: 1px solid transparent;
+        border-radius: 1rem;
+        padding: .6rem;
+        text-align: center;
+        transition: var(--transition);
+    }
+
+    .about__card:hover {
+
+        background: transparent;
+        border-color: purple;
+        
+    }
+
+    .about__icon {
+
+        color: var(--color-primary);
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .about__card h5 {
+
+        font-size: 0.95rem;
+    }
+
+    .about__card p {
+
+        font-size: 0.95rem;
+max-width: 50%;
+    }
+    .about__card small {
+
+        font-size: .7rem;
+        color: var(--color-light);
+    }
+
+}
